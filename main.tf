@@ -15,4 +15,8 @@ provider "aws" {
 
 resource "aws_s3_bucket" "milo-gha-tf" {
   bucket = "244190102671-camilo-gallego"
+  tags = {
+    Owner        = "milo"
+    bootcamp     = "devops"
+  }
 }
