@@ -7,6 +7,11 @@ terraform {
       version = "~> 3.6.2"
     }
   }
+  backend "s3" {
+    bucket = "244190102671-camilo-gallego"
+    key    = "terraform/state.tfstate"
+    region = "us-east-1"
+  }
 }
 
 provider "aws" {
