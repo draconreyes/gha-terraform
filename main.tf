@@ -8,7 +8,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "244190102671-camilo-gallego"
+    bucket = "draconreyal-bucket"
     key    = "terraform/state.tfstate"
     region = "us-east-1"
   }
@@ -19,7 +19,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "milo-gha-tf" {
-  bucket = "244190102671-camilo-gallego"
+  bucket = "draconreyal-bucket"
   tags = {
     Owner        = "milo"
     bootcamp     = "devops"
@@ -27,7 +27,7 @@ resource "aws_s3_bucket" "milo-gha-tf" {
 }
 
 resource "aws_s3_bucket" "tfstate" {
-  bucket = "244190102671-camilo-gallego"
+  bucket = "draconreyal-bucket"
 }
 
 resource "aws_dynamodb_table" "tf_locks" {
